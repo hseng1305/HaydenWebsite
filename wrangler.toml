@@ -1,9 +1,3 @@
+# Optional but still valid
 name = "haydenwebsite"
-type = "webpack"
-workers_dev = true
-route = ""
-zone_id = ""
-
-[site]
-bucket = "./prod"
-entry-point = "index"
+compatibility_date = "2025-03-30"
