@@ -202,3 +202,13 @@ html.dark-mode .theme-toggle-btn .toggle-icon-moon {
 html {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Remove underlines & decoration from social icon links */
+a[href^="https://instagram.com"],
+a[href^="https://youtube.com"],
+a[href^="https://www.linkedin.com"],
+a[href^="https://www.tiktok.com"] {
+  text-decoration: none !important;
+  border: none !important;
+  outline: none !important;
+}
