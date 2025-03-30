@@ -86,17 +86,11 @@ html.dark-mode .row {
   color: #000;
   transition: color 0.3s ease;
 }
-
 html.dark-mode .bi {
   color: #fff;
 }
 
-/* Theme Icon Sizes */
-.bi-theme-icon {
-  font-size: 1.2rem;
-}
-
-/* Dropdown Menu Styling */
+/* Dropdown (if used) */
 .dropdown-menu {
   background-color: #fff;
   color: #000;
@@ -116,20 +110,18 @@ html.dark-mode .bi {
   font-size: 1rem;
 }
 
-/* Active theme highlight - light mode */
 .dropdown-item.active {
   font-weight: bold;
   background-color: #e9ecef;
   color: #000;
 }
 
-/* Hover highlight - light mode */
 .dropdown-item:hover {
   background-color: #f1f1f1;
   color: #000;
 }
 
-/* Dropdown Styling for Dark Mode */
+/* Dropdown in Dark Mode */
 html.dark-mode .dropdown-menu {
   background-color: #2c2c2c;
   color: #fff;
@@ -151,13 +143,62 @@ html.dark-mode .dropdown-item.active {
   color: #fff;
 }
 
-/* Toggle Button Style */
 .dropdown-toggle {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-
 html.dark-mode .dropdown-toggle {
   background-color: #444;
   color: #fff;
   border-color: #666;
+}
+
+/* Dark Mode Toggle Button with Icons */
+.theme-toggle-btn {
+  box-sizing: border-box;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 9999;
+}
+
+.theme-toggle-btn .toggle-icon-sun,
+.theme-toggle-btn .toggle-icon-moon {
+  font-size: 1.25rem;
+}
+
+/* In light mode, show sun and hide moon */
+.theme-toggle-btn .toggle-icon-sun {
+  display: inline;
+  color: #000000;
+}
+
+.theme-toggle-btn .toggle-icon-moon {
+  display: none;
+  color: #b3b3b3;
+}
+
+/* In dark mode, change background and swap icons */
+html.dark-mode .theme-toggle-btn {
+  background-color: #333;
+}
+
+html.dark-mode .theme-toggle-btn .toggle-icon-sun {
+  display: none;
+}
+
+html.dark-mode .theme-toggle-btn .toggle-icon-moon {
+  display: inline;
+  color: #fff;
+}
+
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
