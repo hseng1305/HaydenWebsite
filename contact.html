@@ -3,124 +3,123 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blog - Hayden Seng</title>
+    <title>Contact - Hayden Seng</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script>
       (() => {
-        const theme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (theme === 'dark' || (!theme && prefersDark)) {
-          document.documentElement.classList.add('dark-mode');
+        const theme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (theme === "dark" || (!theme && prefersDark)) {
+          document.documentElement.classList.add("dark-mode");
         }
       })();
     </script>
   </head>
   <body>
-    <!-- Dark Mode Dropdown -->
-    <div class="dropdown position-absolute top-0 end-0 m-3">
-      <button class="btn btn-outline-secondary dropdown-toggle btn-sm" type="button" id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="bi bi-circle-half"></i>
+    <!-- Dark Mode Toggle Button with Icons -->
+    <div class="position-absolute top-0 end-0 m-3" style="z-index: 9999;">
+      <button class="theme-toggle-btn" onclick="toggleDarkMode()">
+        <i class="bi bi-brightness-high toggle-icon-sun"></i>
+        <i class="bi bi-moon toggle-icon-moon"></i>
       </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
-        <li><button class="dropdown-item" data-theme-value="light"><i class="bi bi-sun-fill bi-theme-icon"></i> Light</button></li>
-        <li><button class="dropdown-item" data-theme-value="dark"><i class="bi bi-moon-stars-fill bi-theme-icon"></i> Dark</button></li>
-        <li><button class="dropdown-item" data-theme-value="auto"><i class="bi bi-circle-half bi-theme-icon"></i> Auto</button></li>
-      </ul>
     </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-light mt-3">
-        <div class="container">
-          <a class="navbar-brand fw-normal" href="index.html">Hayden</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-            <ul class="navbar-nav gap-3 align-items-center">
-              <li class="nav-item">
-                <a class="nav-link px-0" href="projects.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-0" href="blog.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-0" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-0" href="https://instagram.com" target="_blank">
-                  <i class="bi bi-instagram"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-0" href="https://youtube.com" target="_blank">
-                  <i class="bi bi-youtube"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-0" href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank">
-                  <i class="bi bi-linkedin"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link px-0" href="https://www.tiktok.com/@YOUR_USERNAME" target="_blank">
-                  <i class="bi bi-tiktok"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+      <div class="container">
+        <a class="navbar-brand fw-normal" href="index.html">Website</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+          <ul class="navbar-nav gap-3 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link px-0" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-0" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-0" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-0" href="https://instagram.com" target="_blank">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-0" href="https://youtube.com" target="_blank">
+                <i class="bi bi-youtube"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-0" href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-0" href="https://www.tiktok.com/@YOUR_USERNAME" target="_blank">
+                <i class="bi bi-tiktok"></i>
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>      
+      </div>
+    </nav>
 
-    <!-- Blog Section -->
+    <!-- Contact Section -->
     <section class="container my-5">
-        <h1 class="mb-4">Contact</h1>
-        <p>Let’s connect. You can reach me via:</p>
-        <ul>
-          <li>Email: <a href="mailto:hseng@jetipper.com.au">hseng@jetipper.com.au</a></li>
-          <li>Instagram: <a href="https://instagram.com" target="_blank">@yourhandle</a></li>
-          <li>YouTube: <a href="https://youtube.com" target="_blank">YouTube Channel</a></li>
-        </ul>
-      </section>
+      <h1 class="mb-4">Contact</h1>
+      <p>Let’s connect. You can reach me via:</p>
+      <ul>
+        <li>Email: <a href="mailto:hayden.seng@haydenseng.com.au">hayden.seng@haydenseng.com.au</a></li>
+        <li>Instagram: <a href="https://instagram.com" target="_blank">@yourhandle</a></li>
+        <li>YouTube: <a href="https://youtube.com" target="_blank">YouTube Channel</a></li>
+      </ul>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Dark Mode Script -->
     <script>
-      const themeButtons = document.querySelectorAll('[data-theme-value]');
-      const applyTheme = (theme) => {
-        localStorage.setItem('theme', theme);
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark-mode');
-        } else if (theme === 'light') {
-          document.documentElement.classList.remove('dark-mode');
+      function toggleDarkMode() {
+        const isDark = document.documentElement.classList.toggle("dark-mode");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add("dark-mode");
         } else {
-          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          document.documentElement.classList.toggle('dark-mode', prefersDark);
+          document.documentElement.classList.remove("dark-mode");
         }
-      };
+      });
 
-      document.addEventListener('DOMContentLoaded', () => {
-        const savedTheme = localStorage.getItem('theme') || 'auto';
-        applyTheme(savedTheme);
-        themeButtons.forEach(btn => {
-          if (btn.dataset.themeValue === savedTheme) {
-            btn.classList.add('active');
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+        if (localStorage.getItem("theme") === "auto") {
+          if (e.matches) {
+            document.documentElement.classList.add("dark-mode");
+          } else {
+            document.documentElement.classList.remove("dark-mode");
           }
-        });
-      });
-
-      themeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          themeButtons.forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
-          applyTheme(button.getAttribute('data-theme-value'));
-        });
-      });
-
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-        if (localStorage.getItem('theme') === 'auto') {
-          applyTheme('auto');
         }
       });
     </script>
